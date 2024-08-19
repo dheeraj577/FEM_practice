@@ -1,0 +1,125 @@
+@font-face {
+    font-family: outfit;
+    src: url(/assets/fonts/outfit/static/Outfit-Regular.ttf);
+}
+
+@font-face {
+font-family: youngserif;
+src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: outfit;
+}
+:root{
+    --White: hsl(0, 0%, 100%);
+
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+
+    --Brown-800: hsl(14, 45%, 36%);
+
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+}
+
+
+img {
+max-width: 100%;
+}
+ul, ol{
+    padding-left: 20px;
+}
+body{
+    background-color: var(--Stone-100);
+}
+h1,h2{
+    font-family: youngserif, serif;
+    color: var(--Brown-800);
+    letter-spacing: 0.05rem;
+}
+p, li{
+    line-height: 1.6;
+    color: var(--Stone-600);
+}
+li{
+    margin-top: 0.5rem;
+}
+
+.container{
+    max-width: 900px;
+    margin-inline: auto;
+    background-color: var(--White);
+}
+.container div:not(first-child) {
+    padding: 1.5rem;
+}
+.banner h1{
+    color: var(--Stone-900);
+    margin-bottom: 1rem;
+}
+.banner article{
+    background-color: var(--Rose-50);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+}
+.banner article h3{
+    color: var(--Rose-800);
+    margin-bottom: 0.5rem;
+}
+.instructions{
+    border-top: 1px solid var(--Stone-150);
+    border-bottom: 1px solid var(--Stone-150);
+}
+.nutrition p{
+    margin-top: 1rem;
+}
+.nutrition ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--Stone-150);
+    padding: 0.5rem 0;
+}
+.nutrition ul li span{
+    color: var(--Brown-800);
+    font-weight: bold;
+}
+.nutrition ul li:last-child{
+    border-bottom: none;
+}
+
+
+
+.attribution { 
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+}
+.attribution a {
+    color: hsl(308, 45%, 44%); 
+}
+.attribution a:hover {
+    text-decoration: none;
+}
+
+@media (min-width: 768px){
+    .container{
+        margin: 5rem auto 0;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+    .banner h1{
+        font-size: 48px;
+    }
+    img{
+        border-radius: 1rem;
+    }
+}

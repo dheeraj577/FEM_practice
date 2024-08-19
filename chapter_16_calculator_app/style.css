@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root{
+    /* ### Theme 1 */
+
+    --Very-dark-desaturated-blue-main-bg: hsl(222, 26%, 31%);
+    --Very-dark-desaturated-blue-toggle-bg: hsl(223, 31%, 20%);
+    --Very-dark-desaturated-blue-screen_bg: hsl(224, 36%, 15%);
+
+    --Desaturated-dark-blue-key-bg: hsl(225, 21%, 49%);
+    --Desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+
+    --Red: hsl(6, 63%, 50%);
+    --Dark-red: hsl(6, 70%, 34%);
+
+    --Light-grayish-orange: hsl(30, 25%, 89%);
+    --Grayish-orange: hsl(28, 16%, 65%);
+
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+    --Blue-hover: #A2B2E1;
+    --Red-hover: #F96B5B;
+
+    /* ### Theme 2 */
+
+    --Light-gray-main-bg: hsl(0, 0%, 90%);
+    --Grayish-red-toggle-bg: hsl(0, 5%, 81%);
+    --Very-light-gray-screen-bg: hsl(0, 0%, 93%);
+
+    --Dark-moderate-cyan-key-bg: hsl(185, 42%, 37%);
+    --Very-dark-cyan-key-shadow: hsl(185, 58%, 25%);
+
+    --Orange: hsl(25, 98%, 40%);
+    --Dark-orange: hsl(25, 99%, 27%);
+
+    --Light-grayish-yellow: hsl(45, 7%, 89%);
+    --Dark-grayish-orange: hsl(35, 11%, 61%);
+    --Cyan-hover: #62B5BC;
+    --Orange-hover: #FF8A38;
+
+    /* #### Text */
+
+    --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+
+    /* ### Theme 3 */
+
+    --Very-dark-violet-main-bg: hsl(268, 75%, 9%);
+    --Very-dark-violet-toggle-bg: hsl(268, 71%, 12%);
+
+    --Dark-violet-key-bg: hsl(281, 89%, 26%);
+    --Vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+
+    --Pure-cyan: hsl(176, 100%, 44%);
+    --Soft-cyan: hsl(177, 92%, 70%);
+
+    --Very-dark-violet: hsl(268, 47%, 21%);
+    --Dark-magenta: hsl(290, 70%, 36%);
+
+    --Light-yellow: hsl(52, 100%, 62%);
+    --Very-dark-blue: hsl(198, 20%, 13%);
+    --Violet-hover: #8631AF;
+    --Soft-cyan-hover: #93FFF8;
+    --Magenta-hover: #6C34AC;
+}
+
+*{
+    /* background: rgb(238, 139, 139); */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 700;
+}
+body{
+    width: 100%;
+    max-width: 1440px;
+    background-color: var(--Very-dark-desaturated-blue-main-bg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+body.active1{
+    background-color: var(--Light-gray-main-bg);
+}
+body.active1 .btn{
+    background-color: var(--Grayish-red-toggle-bg);
+}
+body.active2{
+    background-color: var(--Very-dark-violet-main-bg);
+}
+.toggle{
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: flex-end; */
+}
+.num{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+.right{
+    display: flex;
+    justify-content: flex-end;
+}
+.toggle p {
+    margin: 0 5px;
+    color: var(--White);
+    cursor: pointer;
+}
+body.active1 .toggle h3{
+    color: #111;
+    color: var(--Very-dark-grayish-yellow);
+}
+body.active2 .toggle h3{
+    color: var(--Light-yellow);
+}
+h3{
+    color: var(--White);
+}
+.control{
+    display: flex;
+    justify-content: flex-end;
+}
+.control .box{
+    width: 60px;
+    height: 15px;
+    background-color: var(--Very-dark-desaturated-blue-screen_bg);
+    border-radius: 30px;
+    margin-left: 4px;
+    position: relative;
+    cursor: pointer;
+}
+body.active1 .control .box{
+    background-color: var(--Grayish-red-toggle-bg);
+}
+body.active2 .control #circle{
+    background-color: var(--Pure-cyan);
+}
+.control #circle{
+    width: 15px;
+    height: 15px;
+    background-color: var(--Red);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 30px;
+}
+body.active1 .control #circle{
+    background-color: var(--Orange);
+}
+.control p{
+    color: var(--White);
+    float: right;
+    cursor: pointer;
+    margin-right: 4px;
+}
+.control p::after{
+    content: "";
+    width: 60px;
+    height: 13px;
+    background-color: gray;
+    position: absolute;
+    top:0;
+    right: -100px;
+    border-radius: 30px;
+}
+.control p::before{
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-color: red;
+    position: absolute;
+    top: 1px;
+    right: -52px;
+    border-radius: 50%;
+}
+
+
+body.active1 .control p,
+body.active1 .right p{
+    color: #111;
+    color: var(--Very-dark-grayish-yellow);
+}
+body.active2 .control p,
+body.active2 .right p{
+    color: var(--Light-yellow);
+}
+
+.screen{
+    width: 450px;
+}
+#screen{
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    text-align: right;
+    font-size: 32px;
+    background-color: var(--Very-dark-desaturated-blue-screen_bg);
+    color: var(--White);
+    border: 0;
+    outline: none;
+    border-radius: 7px;
+    padding: 5px 15px;
+}
+body.active1 #screen{
+    background-color: var(--Very-light-gray-screen-bg);
+    color: var(--Very-dark-grayish-yellow);
+}
+body.active2 #screen{
+    background-color: var(--Very-dark-violet-toggle-bg);
+    color: var(--Light-yellow);
+}
+button{
+    width: 90px;
+    padding: 15px;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--Light-grayish-orange);
+    box-shadow: 0 3px 0 0 var(--Grayish-orange);
+    margin: 10px 10px;
+    font-size: 32px;
+    /* color: inherit; */
+}
+body.active1 button{
+    box-shadow: 0 3px 0 0 var(--Dark-grayish-orange);
+    background-color: var(--Light-grayish-yellow);
+    color: var(--Very-dark-grayish-yellow);
+}
+body.active2 button{
+    box-shadow: 0 3px 0 0 var(--Dark-magenta);
+    background-color: var(--Very-dark-violet);
+    color: var(--Light-yellow);
+}
+.btn{
+    display: flex;
+    width: 450px;
+    flex-flow: wrap;
+    background-color: var(--Very-dark-desaturated-blue-screen_bg);
+    padding: 10px 5px;
+    margin: 8px 0;
+    border-radius: 7px;
+}
+body.active2 .btn{
+    background-color: var( --Very-dark-violet-toggle-bg);
+}
+.reset, .del{
+    box-shadow: 0 3px 0 0 var(--Desaturated-dark-blue-key-shadow);
+    background-color: var(--Desaturated-dark-blue-key-bg);
+    color: var(--White);
+    font-size: 16px;
+}
+body.active1 .reset, body.active1 .del{
+    box-shadow: 0 3px 0 0 var(--Very-dark-cyan-key-shadow);
+    background-color: var(--Dark-moderate-cyan-key-bg);
+    color: var(--White);
+}
+body.active2 .reset, body.active2 .del{
+    box-shadow: 0 3px 0 0 var(--Vivid-magenta-key-shadow);
+    background-color: var(--Dark-violet-key-bg);
+    color: var(--White);
+}
+.reset, .equal {
+    width: 200px;
+    color: var(--White);
+    font-size: 16px;
+}
+.equal{
+    box-shadow: 0 3px 0 0 var(--Dark-red);
+    background-color: var(--Red);
+}
+body.active1 .equal{
+    box-shadow: 0 3px 0 0 var(--Dark-orange);
+    background-color: var(--Orange);
+}
+body.active2 .equal{
+    color: black;
+    box-shadow: 0 3px 0 0 var(--Soft-cyan);
+    background-color: var(--Pure-cyan);
+}
+
+button:hover{
+    background-color: var(--White);
+}
+body.active1 button:hover{
+    background-color: var(--White);
+}
+body.active2 button:hover{
+    background-color: var(--Magenta-hover);
+}
+.reset:hover, .del:hover{
+    background-color: var(--Blue-hover);
+}
+body.active1 .reset:hover, body.active1 .del:hover{
+    background-color: var(--Cyan-hover);
+}
+body.active2 .reset:hover, body.active2 .del:hover{
+    background-color: var(--Violet-hover);
+}
+.equal:hover{
+    background-color: var(--Red-hover);
+}
+body.active1 .equal:hover{
+    background-color: var(--Orange-hover);
+}
+body.active2 .equal:hover{
+    background-color: var(--Soft-cyan-hover);
+}
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
